@@ -34,7 +34,7 @@ export default function Header() {
 							<li>
 								<Link
 									href='/'
-									className='hover:underline underline-offset-4 decoration-2 decoration-[#D4AF37] transition-colors duration-300'
+									className='hover:underline underline-offset-8 decoration-2 decoration-[#D4AF37] transition-colors duration-300'
 								>
 									Home
 								</Link>
@@ -42,7 +42,7 @@ export default function Header() {
 							<li>
 								<Link
 									href='/about'
-									className='hover:underline underline-offset-4 decoration-2 decoration-[#D4AF37] transition-colors duration-300'
+									className='hover:underline underline-offset-8 decoration-2 decoration-[#D4AF37] transition-colors duration-300'
 								>
 									About
 								</Link>
@@ -50,7 +50,7 @@ export default function Header() {
 							<li>
 								<Link
 									href='/services'
-									className='hover:underline underline-offset-4 decoration-2 decoration-[#D4AF37] transition-colors duration-300'
+									className='hover:underline underline-offset-8 decoration-2 decoration-[#D4AF37] transition-colors duration-300'
 								>
 									Services
 								</Link>
@@ -58,7 +58,7 @@ export default function Header() {
 							<li>
 								<Link
 									href='/journeys'
-									className='hover:underline underline-offset-4 decoration-2 decoration-[#D4AF37] transition-colors duration-300'
+									className='hover:underline underline-offset-8 decoration-2 decoration-[#D4AF37] transition-colors duration-300'
 								>
 									Journeys
 								</Link>
@@ -66,7 +66,7 @@ export default function Header() {
 							<li>
 								<Link
 									href='/contact'
-									className='hover:underline underline-offset-4 decoration-2 decoration-[#D4AF37] transition-colors duration-300'
+									className='hover:underline underline-offset-8 decoration-2 decoration-[#D4AF37] transition-colors duration-300'
 								>
 									Contact
 								</Link>
