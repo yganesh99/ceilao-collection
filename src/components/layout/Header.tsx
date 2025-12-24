@@ -14,15 +14,15 @@ export default function Header() {
 	return (
 		<>
 			<header className='absolute top-0 w-full z-50 bg-champagne py-4'>
-				<div className='container mx-auto px-6 md:px-12 flex justify-between items-center'>
+				<div className='container mx-auto px-2 flex justify-between items-center'>
 					{/* Logo */}
-					<div className='relative w-32 h-20 sm:w-48 sm:h-24 md:w-72 md:h-32 shrink-0 transition-all duration-300'>
+					<div className='relative h-16 md:h-16 lg:h-20 aspect-2/1'>
 						<Link href='/'>
 							<Image
 								src='/assets/logo.png'
 								alt='Ceilão Collection'
 								fill
-								className='object-contain'
+								className='object-cover'
 								priority
 							/>
 						</Link>
