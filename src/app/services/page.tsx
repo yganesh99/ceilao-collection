@@ -55,7 +55,7 @@ export default function Services() {
 							>
 								{/* Image */}
 								<div className='w-full md:w-1/2'>
-									<div className='relative aspect-[3/2] w-full overflow-hidden'>
+									<div className='relative aspect-3/2 w-full overflow-hidden'>
 										<Image
 											src={service.image}
 											alt={service.title}

@@ -45,7 +45,7 @@
 	h4,
 	h5,
 	h6 {
-		@apply font-serif text-navy;
+		@apply font-serif text-white;
 	}
 
 	p {

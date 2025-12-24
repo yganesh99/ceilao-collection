@@ -14,7 +14,7 @@ export default function Hero() {
 					quality={90}
 				/>
 				{/* Overlay gradient for text readability */}
-				<div className='absolute inset-0 bg-black/30 bg-gradient-to-b from-black/40 via-transparent to-black/20' />
+				<div className='absolute inset-0 bg-black/30 bg-linear-to-b from-black/40 via-transparent to-black/20' />
 			</div>
 
 			{/* Content */}

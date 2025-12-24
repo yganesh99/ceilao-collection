@@ -50,7 +50,7 @@ export default function Journeys() {
 								className='bg-white group cursor-pointer border border-transparent hover:border-gold/30 transition-all duration-300'
 							>
 								{/* Image */}
-								<div className='relative w-full aspect-[4/3] overflow-hidden'>
+								<div className='relative w-full aspect-4/3 overflow-hidden'>
 									<Image
 										src={journey.image}
 										alt={journey.title}

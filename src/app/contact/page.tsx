@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import PageHeader from '@/components/common/PageHeader';
+import ContactForm from '@/components/contact/ContactForm';
 
 export const metadata: Metadata = {
 	title: 'Contact Us | Ceilão Collection',
@@ -68,95 +69,7 @@ export default function Contact() {
 
 						{/* Form */}
 						<div className='w-full lg:w-2/3'>
-							<form className='space-y-6'>
-								<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-									<div className='flex flex-col'>
-										<label
-											htmlFor='firstName'
-											className='text-xs uppercase tracking-widest text-navy mb-2'
-										>
-											First Name
-										</label>
-										<input
-											type='text'
-											id='firstName'
-											className='border-b border-gray-300 py-3 focus:border-gold focus:outline-none bg-transparent transition-colors font-light'
-											placeholder='Enter your first name'
-										/>
-									</div>
-									<div className='flex flex-col'>
-										<label
-											htmlFor='lastName'
-											className='text-xs uppercase tracking-widest text-navy mb-2'
-										>
-											Last Name
-										</label>
-										<input
-											type='text'
-											id='lastName'
-											className='border-b border-gray-300 py-3 focus:border-gold focus:outline-none bg-transparent transition-colors font-light'
-											placeholder='Enter your last name'
-										/>
-									</div>
-								</div>
-
-								<div className='flex flex-col'>
-									<label
-										htmlFor='email'
-										className='text-xs uppercase tracking-widest text-navy mb-2'
-									>
-										Email Address
-									</label>
-									<input
-										type='email'
-										id='email'
-										className='border-b border-gray-300 py-3 focus:border-gold focus:outline-none bg-transparent transition-colors font-light'
-										placeholder='Enter your email address'
-									/>
-								</div>
-
-								<div className='flex flex-col'>
-									<label
-										htmlFor='interest'
-										className='text-xs uppercase tracking-widest text-navy mb-2'
-									>
-										Area of Interest
-									</label>
-									<select
-										id='interest'
-										className='border-b border-gray-300 py-3 focus:border-gold focus:outline-none bg-transparent transition-colors font-light text-charcoal/70'
-									>
-										<option>General Enquiry</option>
-										<option>Curated Journeys</option>
-										<option>Weddings & Events</option>
-										<option>Private Villas</option>
-									</select>
-								</div>
-
-								<div className='flex flex-col'>
-									<label
-										htmlFor='message'
-										className='text-xs uppercase tracking-widest text-navy mb-2'
-									>
-										Message
-									</label>
-									<textarea
-										id='message'
-										rows={4}
-										className='border-b border-gray-300 py-3 focus:border-gold focus:outline-none bg-transparent transition-colors font-light resize-none'
-										placeholder='How can we assist you?'
-									></textarea>
-								</div>
-
-								<div className='pt-6'>
-									<button
-										type='submit'
-										className='px-10 py-4 bg-navy text-white uppercase text-xs tracking-widest hover:bg-gold hover:text-navy transition-all duration-500 ease-out'
-									>
-										Send Enquiry
-									</button>
-								</div>
-							</form>
+							<ContactForm />
 						</div>
 					</div>
 				</div>

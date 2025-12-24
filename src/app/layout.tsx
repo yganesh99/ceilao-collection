@@ -34,7 +34,7 @@ export default function RootLayout({
 				className={`${playfair.variable} ${lato.variable} antialiased bg-champagne text-charcoal font-sans flex flex-col min-h-screen`}
 			>
 				<Header />
-				<div className='flex-grow'>{children}</div>
+				<div className='grow'>{children}</div>
 				<Footer />
 			</body>
 		</html>

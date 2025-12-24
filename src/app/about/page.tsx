@@ -22,7 +22,7 @@ export default function About() {
 				<div className='container mx-auto px-6'>
 					<div className='flex flex-col md:flex-row items-center gap-16'>
 						<div className='w-full md:w-1/2'>
-							<div className='relative aspect-[4/5] w-full overflow-hidden'>
+							<div className='relative aspect-4/5 w-full overflow-hidden'>
 								<Image
 									src='/assets/card-heritage.png'
 									alt='Sri Lankan Heritage'

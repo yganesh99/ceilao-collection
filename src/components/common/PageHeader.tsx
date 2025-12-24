@@ -23,7 +23,7 @@ export default function PageHeader({
 					priority
 				/>
 				{/* Overlay */}
-				<div className='absolute inset-0 bg-black/40 bg-gradient-to-b from-black/50 via-transparent to-black/30' />
+				<div className='absolute inset-0 bg-black/40 bg-linear-to-b from-black/50 via-transparent to-black/30' />
 			</div>
 
 			{/* Content */}
