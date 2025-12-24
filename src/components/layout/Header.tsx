@@ -13,10 +13,10 @@ export default function Header() {
 
 	return (
 		<>
-			<header className='absolute top-0 w-full z-50 bg-champagne py-6'>
-				<div className='container mx-auto h-16 px-6 flex justify-between items-center'>
+			<header className='absolute top-0 w-full z-50 bg-champagne py-4'>
+				<div className='container mx-auto px-6 md:px-12 flex justify-between items-center'>
 					{/* Logo */}
-					<div className='relative sm:w-40 sm:h-28 md:w-64 md:h-32'>
+					<div className='relative w-32 h-20 sm:w-48 sm:h-24 md:w-72 md:h-32 shrink-0 transition-all duration-300'>
 						<Link href='/'>
 							<Image
 								src='/assets/logo.png'
@@ -30,7 +30,7 @@ export default function Header() {
 
 					{/* Desktop Navigation */}
 					<nav className='hidden md:block'>
-						<ul className='flex space-x-8 text-black uppercase tracking-widest text-sm font-medium'>
+						<ul className='flex space-x-10 text-black uppercase tracking-widest text-sm font-medium'>
 							<li>
 								<Link
 									href='/'
@@ -75,26 +75,26 @@ export default function Header() {
 					</nav>
 
 					{/* Mobile Menu Button */}
-					<div className='md:hidden text-white z-50'>
+					<div className='md:hidden z-50'>
 						<button
 							onClick={toggleMenu}
-							className='space-y-2 focus:outline-none text-black'
+							className='space-y-2 focus:outline-none text-[#000000]'
 							aria-label='Toggle Menu'
 						>
 							<span
-								className={`block w-8 h-0.5 bg-white transition-transform duration-300 ${
+								className={`block w-8 h-0.5 bg-current transition-transform duration-300 ${
 									isMobileMenuOpen
 										? 'rotate-45 translate-y-2.5'
 										: ''
 								}`}
 							></span>
 							<span
-								className={`block w-8 h-0.5 bg-white transition-opacity duration-300 ${
+								className={`block w-8 h-0.5 bg-current transition-opacity duration-300 ${
 									isMobileMenuOpen ? 'opacity-0' : ''
 								}`}
 							></span>
 							<span
-								className={`block w-8 h-0.5 bg-white transition-transform duration-300 ${
+								className={`block w-8 h-0.5 bg-current transition-transform duration-300 ${
 									isMobileMenuOpen
 										? '-rotate-45 -translate-y-2.5'
 										: ''
