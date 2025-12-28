@@ -1,6 +1,6 @@
 export default function About() {
 	return (
-		<section className='bg-champagne pb-2 border-t-4 border-white'>
+		<section className='bg-champagne pb-2 border-t-8 border-champagne'>
 			<div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-20'>
 				<div className='bg-navy py-4 sm:py-20 md:py-24 px-1 sm:px-10 lg:px-20 text-center shadow-xl'>
 					<h1 className='text-xl sm:text-4xl md:text-6xl lg:text-7xl mb-4 tracking-wide font-serif text-[#cea263]'>

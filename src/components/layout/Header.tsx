@@ -14,7 +14,7 @@ export default function Header() {
 	return (
 		<>
 			<header className='absolute top-0 w-full z-50 bg-champagne py-4'>
-				<div className='container mx-auto px-2 flex justify-between items-center'>
+				<div className='container mx-auto px-2 flex justify-between items-center relative'>
 					{/* Logo */}
 					<div className='relative h-16 md:h-16 lg:h-20 aspect-2/1'>
 						<Link href='/'>
@@ -74,94 +74,113 @@ export default function Header() {
 						</ul>
 					</nav>
 
-					{/* Mobile Menu Button */}
+					{/* Mobile Menu Button (Hamburger) */}
 					<div className='md:hidden z-50'>
 						<button
 							onClick={toggleMenu}
 							className='space-y-2 focus:outline-none text-[#cea263]'
-							aria-label='Toggle Menu'
+							aria-label='Open Menu'
 						>
-							<span
-								className={`block w-8 h-0.5 bg-current transition-transform duration-300 ${
-									isMobileMenuOpen
-										? 'rotate-45 translate-y-2.5'
-										: ''
-								}`}
-							></span>
-							<span
-								className={`block w-8 h-0.5 bg-current transition-opacity duration-300 ${
-									isMobileMenuOpen ? 'opacity-0' : ''
-								}`}
-							></span>
-							<span
-								className={`block w-8 h-0.5 bg-current transition-transform duration-300 ${
-									isMobileMenuOpen
-										? '-rotate-45 -translate-y-2.5'
-										: ''
-								}`}
-							></span>
+							<span className='block w-8 h-0.5 bg-current'></span>
+							<span className='block w-8 h-0.5 bg-current'></span>
+							<span className='block w-8 h-0.5 bg-current'></span>
 						</button>
 					</div>
 				</div>
 			</header>
 
-			{/* Mobile Menu Overlay */}
+			{/* Mobile Menu Backdrop & Drawer */}
 			<div
-				className={`fixed inset-0 bg-navy z-40 flex flex-col items-center justify-center transition-opacity duration-500 ease-in-out md:hidden ${
+				className={`fixed inset-0 z-60 md:hidden transition-all duration-300 ${
 					isMobileMenuOpen
-						? 'opacity-100 pointer-events-auto'
-						: 'opacity-0 pointer-events-none'
+						? 'opacity-100 visible'
+						: 'opacity-0 invisible delay-300'
 				}`}
 			>
-				<nav>
-					<ul className='flex flex-col space-y-8 text-center text-[#cea263] uppercase tracking-widest text-lg font-light'>
-						<li>
-							<Link
-								href='/'
+				{/* Backdrop */}
+				<div
+					className='absolute inset-0 bg-black/50 transition-opacity duration-300'
+					onClick={toggleMenu}
+				/>
+
+				{/* Drawer */}
+				<div
+					className={`absolute top-0 right-0 h-fit w-2/3 max-w-xs bg-navy text-[#cea263] shadow-xl transform transition-transform duration-300 ease-out ${
+						isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+					}`}
+				>
+					<div className='flex flex-col h-full p-6'>
+						{/* Close Button */}
+						<div className='flex justify-end mb-8'>
+							<button
 								onClick={toggleMenu}
-								className='hover:text-gold transition-colors'
+								className='space-y-2 focus:outline-none text-[#cea263]'
+								aria-label='Close Menu'
 							>
-								Home
-							</Link>
-						</li>
-						<li>
-							<Link
-								href='/about'
-								onClick={toggleMenu}
-								className='hover:text-gold transition-colors'
-							>
-								About
-							</Link>
-						</li>
-						<li>
-							<Link
-								href='/services'
-								onClick={toggleMenu}
-								className='hover:text-gold transition-colors'
-							>
-								Services
-							</Link>
-						</li>
-						<li>
-							<Link
-								href='/journeys'
-								onClick={toggleMenu}
-								className='hover:text-gold transition-colors'
-							>
-								Journeys
-							</Link>
-						</li>
-						<li>
-							<Link
-								href='/contact'
-								onClick={toggleMenu}
-								className='hover:text-gold transition-colors'
-							>
-								Contact
-							</Link>
-						</li>
-					</ul>
-				</nav>
+								<span
+									className={`block w-8 h-0.5 bg-current transition-transform duration-300 rotate-45 translate-y-2.5`}
+								></span>
+								<span
+									className={`block w-8 h-0.5 bg-current opacity-0`}
+								></span>
+								<span
+									className={`block w-8 h-0.5 bg-current transition-transform duration-300 -rotate-45 -translate-y-2.5`}
+								></span>
+							</button>
+						</div>
+
+						{/* Navigation Links */}
+						<nav>
+							<ul className='flex flex-col space-y-6 uppercase tracking-widest text-lg font-light text-center'>
+								<li>
+									<Link
+										href='/'
+										onClick={toggleMenu}
+										className='hover:text-white transition-colors block border-b border-[#cea263]/20 pb-2'
+									>
+										Home
+									</Link>
+								</li>
+								<li>
+									<Link
+										href='/about'
+										onClick={toggleMenu}
+										className='hover:text-white transition-colors block border-b border-[#cea263]/20 pb-2'
+									>
+										About
+									</Link>
+								</li>
+								<li>
+									<Link
+										href='/services'
+										onClick={toggleMenu}
+										className='hover:text-white transition-colors block border-b border-[#cea263]/20 pb-2'
+									>
+										Services
+									</Link>
+								</li>
+								<li>
+									<Link
+										href='/journeys'
+										onClick={toggleMenu}
+										className='hover:text-white transition-colors block border-b border-[#cea263]/20 pb-2'
+									>
+										Journeys
+									</Link>
+								</li>
+								<li>
+									<Link
+										href='/contact'
+										onClick={toggleMenu}
+										className='hover:text-white transition-colors block border-b border-[#cea263]/20 pb-2'
+									>
+										Contact
+									</Link>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
 			</div>
 		</>
 	);
