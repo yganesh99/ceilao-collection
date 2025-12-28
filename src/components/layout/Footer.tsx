@@ -25,22 +25,16 @@ export default function Footer() {
 				{/* Navigation Links */}
 				<div className='flex space-x-8 mb-10 text-xs tracking-widest uppercase text-gold/80'>
 					<Link
-						href='/about'
+						href='/legal'
 						className='hover:text-white transition-colors'
 					>
-						About
+						Legal
 					</Link>
 					<Link
-						href='/services'
+						href='/commitments'
 						className='hover:text-white transition-colors'
 					>
-						Services
-					</Link>
-					<Link
-						href='/journeys'
-						className='hover:text-white transition-colors'
-					>
-						Journeys
+						Commitments
 					</Link>
 					<Link
 						href='/contact'
@@ -48,26 +42,6 @@ export default function Footer() {
 					>
 						Contact
 					</Link>
-				</div>
-
-				{/* Social Icons (Placeholders) */}
-				<div className='flex space-x-6 mb-8 text-gold'>
-					{/* Facebook */}
-					<a
-						href='#'
-						className='w-5 h-5 border border-gold/50 rounded-full flex items-center justify-center hover:bg-gold hover:text-navy transition-all'
-					>
-						<span className='sr-only'>Facebook</span>
-						<span className='text-[10px]'>f</span>
-					</a>
-					{/* Instagram */}
-					<a
-						href='#'
-						className='w-5 h-5 border border-gold/50 rounded-full flex items-center justify-center hover:bg-gold hover:text-navy transition-all'
-					>
-						<span className='sr-only'>Instagram</span>
-						<span className='text-[10px]'>i</span>
-					</a>
 				</div>
 
 				{/* Copyright */}

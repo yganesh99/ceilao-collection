@@ -41,7 +41,7 @@ export default function Header() {
 							</li>
 							<li>
 								<Link
-									href='/about'
+									href='/#about'
 									className='hover:underline underline-offset-8 decoration-2 decoration-[#D4AF37] transition-colors duration-300'
 								>
 									About
@@ -49,18 +49,18 @@ export default function Header() {
 							</li>
 							<li>
 								<Link
-									href='/services'
+									href='/#brands'
 									className='hover:underline underline-offset-8 decoration-2 decoration-[#D4AF37] transition-colors duration-300'
 								>
-									Services
+									Our Brands
 								</Link>
 							</li>
 							<li>
 								<Link
-									href='/journeys'
+									href='/#connect'
 									className='hover:underline underline-offset-8 decoration-2 decoration-[#D4AF37] transition-colors duration-300'
 								>
-									Journeys
+									Connect
 								</Link>
 							</li>
 							<li>
@@ -143,7 +143,7 @@ export default function Header() {
 								</li>
 								<li>
 									<Link
-										href='/about'
+										href='/#about'
 										onClick={toggleMenu}
 										className='hover:text-white transition-colors block border-b border-[#cea263]/20 pb-2'
 									>
@@ -152,20 +152,20 @@ export default function Header() {
 								</li>
 								<li>
 									<Link
-										href='/services'
+										href='/#brands'
 										onClick={toggleMenu}
 										className='hover:text-white transition-colors block border-b border-[#cea263]/20 pb-2'
 									>
-										Services
+										Our Brands
 									</Link>
 								</li>
 								<li>
 									<Link
-										href='/journeys'
+										href='/#connect'
 										onClick={toggleMenu}
 										className='hover:text-white transition-colors block border-b border-[#cea263]/20 pb-2'
 									>
-										Journeys
+										Connect
 									</Link>
 								</li>
 								<li>
