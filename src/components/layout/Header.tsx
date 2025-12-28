@@ -3,12 +3,34 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const pathname = usePathname();
 
 	const toggleMenu = () => {
 		setIsMobileMenuOpen(!isMobileMenuOpen);
+	};
+
+	const handleScroll = (
+		e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+		id: string
+	) => {
+		if (pathname === '/') {
+			e.preventDefault();
+			const element = document.getElementById(id);
+			if (element) {
+				element.scrollIntoView({ behavior: 'smooth' });
+			}
+			// Update URL hash without scroll
+			window.history.pushState(null, '', `/#${id}`);
+		}
+		// If not home, let Link handle navigation to /#id
+
+		if (isMobileMenuOpen) {
+			toggleMenu();
+		}
 	};
 
 	return (
@@ -42,6 +64,7 @@ export default function Header() {
 							<li>
 								<Link
 									href='/#about'
+									onClick={(e) => handleScroll(e, 'about')}
 									className='hover:underline underline-offset-8 decoration-2 decoration-[#D4AF37] transition-colors duration-300'
 								>
 									About
@@ -50,6 +73,7 @@ export default function Header() {
 							<li>
 								<Link
 									href='/#brands'
+									onClick={(e) => handleScroll(e, 'brands')}
 									className='hover:underline underline-offset-8 decoration-2 decoration-[#D4AF37] transition-colors duration-300'
 								>
 									Our Brands
@@ -58,6 +82,7 @@ export default function Header() {
 							<li>
 								<Link
 									href='/#connect'
+									onClick={(e) => handleScroll(e, 'connect')}
 									className='hover:underline underline-offset-8 decoration-2 decoration-[#D4AF37] transition-colors duration-300'
 								>
 									Connect
@@ -144,7 +169,9 @@ export default function Header() {
 								<li>
 									<Link
 										href='/#about'
-										onClick={toggleMenu}
+										onClick={(e) =>
+											handleScroll(e, 'about')
+										}
 										className='hover:text-white transition-colors block border-b border-[#cea263]/20 pb-2'
 									>
 										About
@@ -153,7 +180,9 @@ export default function Header() {
 								<li>
 									<Link
 										href='/#brands'
-										onClick={toggleMenu}
+										onClick={(e) =>
+											handleScroll(e, 'brands')
+										}
 										className='hover:text-white transition-colors block border-b border-[#cea263]/20 pb-2'
 									>
 										Our Brands
@@ -162,7 +191,9 @@ export default function Header() {
 								<li>
 									<Link
 										href='/#connect'
-										onClick={toggleMenu}
+										onClick={(e) =>
+											handleScroll(e, 'connect')
+										}
 										className='hover:text-white transition-colors block border-b border-[#cea263]/20 pb-2'
 									>
 										Connect
