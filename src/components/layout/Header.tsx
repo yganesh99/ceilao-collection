@@ -22,7 +22,7 @@ export default function Header() {
 								src='/assets/logo.png'
 								alt='Ceilão Collection'
 								fill
-								className='object-cover'
+								className='object-contain'
 								priority
 							/>
 						</Link>
@@ -78,7 +78,7 @@ export default function Header() {
 					<div className='md:hidden z-50'>
 						<button
 							onClick={toggleMenu}
-							className='space-y-2 focus:outline-none text-[#000000]'
+							className='space-y-2 focus:outline-none text-[#cea263]'
 							aria-label='Toggle Menu'
 						>
 							<span
@@ -114,7 +114,7 @@ export default function Header() {
 				}`}
 			>
 				<nav>
-					<ul className='flex flex-col space-y-8 text-center text-white uppercase tracking-widest text-lg font-light'>
+					<ul className='flex flex-col space-y-8 text-center text-[#cea263] uppercase tracking-widest text-lg font-light'>
 						<li>
 							<Link
 								href='/'
