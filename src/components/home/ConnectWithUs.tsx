@@ -1,6 +1,16 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from 'react-icons/fa';
+import { useState } from 'react';
+import LaunchingSoonModal from '../common/LaunchingSoonModal';
+import {
+	FaFacebook,
+	FaInstagram,
+	FaLinkedin,
+	FaTiktok,
+	FaWhatsapp,
+} from 'react-icons/fa';
 
 const ConnectWithUs = () => {
 	const brands = [
@@ -30,8 +40,15 @@ const ConnectWithUs = () => {
 		{ icon: FaInstagram, href: '#', label: 'Instagram' },
 		{ icon: FaFacebook, href: '#', label: 'Facebook' },
 		{ icon: FaTiktok, href: '#', label: 'TikTok' },
-		{ icon: FaLinkedin, href: '#', label: 'LinkedIn' },
+		{ icon: FaWhatsapp, href: '#', label: 'Whatsapp' },
 	];
+
+	const [isModalOpen, setIsModalOpen] = useState(false);
+
+	const handleSocialClick = (e: React.MouseEvent) => {
+		e.preventDefault();
+		setIsModalOpen(true);
+	};
 
 	return (
 		<section
@@ -66,6 +83,7 @@ const ConnectWithUs = () => {
 									<Link
 										key={social.label}
 										href={social.href}
+										onClick={handleSocialClick}
 										className='text-navy hover:text-gold transition-colors duration-300 transform hover:scale-110'
 										aria-label={`${brand.name} on ${social.label}`}
 									>
@@ -77,6 +95,11 @@ const ConnectWithUs = () => {
 					))}
 				</div>
 			</div>
+
+			<LaunchingSoonModal
+				isOpen={isModalOpen}
+				onClose={() => setIsModalOpen(false)}
+			/>
 		</section>
 	);
 };

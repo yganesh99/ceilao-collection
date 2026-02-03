@@ -1,4 +1,8 @@
+'use client';
+
 import Image from 'next/image';
+import LaunchingSoonModal from '../common/LaunchingSoonModal';
+import { useState } from 'react';
 
 const features = [
 	{
@@ -25,6 +29,13 @@ const features = [
 ];
 
 export default function FeatureCards() {
+	const [isModalOpen, setIsModalOpen] = useState(false);
+
+	const handleClick = (e: React.MouseEvent) => {
+		e.preventDefault();
+		setIsModalOpen(true);
+	};
+
 	return (
 		<section
 			id='brands'
@@ -55,13 +66,25 @@ export default function FeatureCards() {
 								{feature.subtitle}
 							</p>
 
-							<button className='px-6 py-2 border border-gold text-white bg-navy uppercase text-xs tracking-widest hover:bg-gold hover:text-white transition-all duration-300'>
+							<button
+								onClick={(e) => {
+									feature.title === 'Curated Journeys' ||
+									feature.title === 'Bespoke Celebrations'
+										? handleClick(e)
+										: null;
+								}}
+								className='px-6 py-2 border border-gold text-white bg-navy uppercase text-xs tracking-widest hover:bg-gold hover:text-white transition-all duration-300'
+							>
 								Visit Site
 							</button>
 						</div>
 					))}
 				</div>
 			</div>
+			<LaunchingSoonModal
+				isOpen={isModalOpen}
+				onClose={() => setIsModalOpen(false)}
+			/>
 		</section>
 	);
 }
