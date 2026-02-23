@@ -8,21 +8,21 @@ const features = [
 	{
 		title: 'Our Heritage',
 		subtitle:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
+			'Ceilão Travel & Tours curates journeys across Sri Lanka for the discerning traveler seeking depth, authenticity, and refined luxury. Each experience is handcrafted to reveal an island not just seen, but felt.',
 		image: '/assets/ceilao-tours-logo.png',
 		cta: 'Discover Heritage',
 	},
 	{
 		title: 'Bespoke Celebrations',
 		subtitle:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
+			'Ceilão Events curates exclusive, intimate celebrations for those who seek more than just a moment. We craft lasting memories through thoughtful detail and quiet precision, weaving each experience into your story.',
 		image: '/assets/ceilao-events-logo.png',
 		cta: 'Plan Your Event',
 	},
 	{
 		title: 'Curated Journeys',
 		subtitle:
-			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
+			'The Hopeful Foundation empowers future generations and preserves our heritage through grassroots initiatives. We create pathways for our community to share in the joy of travel and celebration, offering experiences that inspire, uplift, and endure.',
 		image: '/assets/hopeful-foundation.png',
 		cta: 'Explore Journeys',
 	},
@@ -46,10 +46,12 @@ export default function FeatureCards() {
 					{features.map((feature, index) => (
 						<div
 							key={index}
-							className='group relative flex flex-col items-center text-center'
+							className='group relative flex flex-col items-center text-left h-full'
 						>
 							{/* Image Container */}
-							<div className='relative flex justify-center w-full aspect-4/5 mb-4 overflow-hidden h-50'>
+							<div
+								className={`relative flex justify-center w-full aspect-4/5 mb-4 overflow-hidden h-50 shrink-0 ${index === 0 ? 'mr-16' : 'justify-center'}`}
+							>
 								<Image
 									src={feature.image}
 									alt={feature.title}
@@ -62,7 +64,7 @@ export default function FeatureCards() {
 								{/* <div className='absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500' /> */}
 							</div>
 
-							<p className='text-sm text-navy mb-6 font-light'>
+							<p className='text-sm md:text-[14px] text-navy mb-6 font-light grow'>
 								{feature.subtitle}
 							</p>
 
@@ -73,7 +75,7 @@ export default function FeatureCards() {
 										? handleClick(e)
 										: null;
 								}}
-								className='px-6 py-2 border border-gold text-white bg-navy uppercase text-xs tracking-widest hover:bg-gold hover:text-white transition-all duration-300'
+								className='mt-auto px-6 py-2 border border-gold text-white bg-navy uppercase text-xs tracking-widest hover:bg-gold hover:text-white transition-all duration-300'
 							>
 								Visit Site
 							</button>

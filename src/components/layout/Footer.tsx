@@ -25,6 +25,12 @@ export default function Footer() {
 				{/* Navigation Links */}
 				<div className='flex space-x-8 mb-10 text-xs tracking-widest uppercase text-gold/80'>
 					<Link
+						href='/about'
+						className='hover:text-white transition-colors'
+					>
+						About Us
+					</Link>
+					<Link
 						href='/legal'
 						className='hover:text-white transition-colors'
 					>
@@ -45,9 +51,15 @@ export default function Footer() {
 				</div>
 
 				{/* Copyright */}
-				<div className='text-[10px] text-white/30 uppercase tracking-wider'>
-					&copy; {new Date().getFullYear()} Ceilão Collection. All
-					Rights Reserved.
+				<div className='text-[10px] text-white/60 uppercase tracking-wider text-center'>
+					<p className='mt-2'>
+						Ceilão Collection (Private) Limited:- PV 00345241 |
+						Registered in Sri Lanka.
+					</p>
+					<p>
+						&copy; {new Date().getFullYear()} Ceilão Collection. All
+						Rights Reserved.
+					</p>
 				</div>
 			</div>
 		</footer>

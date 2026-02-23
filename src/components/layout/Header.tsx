@@ -15,7 +15,7 @@ export default function Header() {
 
 	const handleScroll = (
 		e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
-		id: string
+		id: string,
 	) => {
 		if (pathname === '/') {
 			e.preventDefault();
@@ -63,11 +63,10 @@ export default function Header() {
 							</li>
 							<li>
 								<Link
-									href='/#about'
-									onClick={(e) => handleScroll(e, 'about')}
+									href='/about'
 									className='hover:underline underline-offset-8 decoration-2 decoration-[#D4AF37] transition-colors duration-300'
 								>
-									About
+									About Us
 								</Link>
 							</li>
 							<li>
@@ -168,13 +167,11 @@ export default function Header() {
 								</li>
 								<li>
 									<Link
-										href='/#about'
-										onClick={(e) =>
-											handleScroll(e, 'about')
-										}
+										href='/about'
+										onClick={toggleMenu}
 										className='hover:text-white transition-colors block border-b border-[#cea263]/20 pb-2'
 									>
-										About
+										About Us
 									</Link>
 								</li>
 								<li>
