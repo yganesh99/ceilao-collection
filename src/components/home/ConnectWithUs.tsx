@@ -18,21 +18,25 @@ const ConnectWithUs = () => {
 			name: 'Ceilão Collection',
 			id: 1,
 			imageSrc: '/assets/logo.png',
+			text: 'Unveiling Soon',
 		},
 		{
 			name: 'Ceilão Travels & Tours',
 			id: 2,
 			imageSrc: '/assets/ceilao-tours-logo.png',
+			text: 'Unveiling Soon',
 		},
 		{
 			name: 'Ceilão Events',
 			id: 3,
 			imageSrc: '/assets/ceilao-events-logo.png',
+			text: 'Unveiling Soon',
 		},
 		{
 			name: 'Hopeful Foundation',
 			id: 4,
 			imageSrc: '/assets/hopeful-foundation.png',
+			text: 'Unveiling Soon',
 		},
 	];
 
@@ -99,6 +103,8 @@ const ConnectWithUs = () => {
 			<LaunchingSoonModal
 				isOpen={isModalOpen}
 				onClose={() => setIsModalOpen(false)}
+				heading='Unveiling Soon'
+				// text='We’re crafting something special. Stay tuned for updates.'
 			/>
 		</section>
 	);

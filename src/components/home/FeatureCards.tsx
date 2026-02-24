@@ -18,6 +18,7 @@ const features = [
 			'Ceilão Events curates exclusive, intimate celebrations for those who seek more than just a moment. We craft lasting memories through thoughtful detail and quiet precision, weaving each experience into your story.',
 		image: '/assets/ceilao-events-logo.png',
 		cta: 'Plan Your Event',
+		text: 'Ceilão Events is currently being refined. We look forward to unveiling it soon.',
 	},
 	{
 		title: 'Curated Journeys',
@@ -25,11 +26,13 @@ const features = [
 			'The Hopeful Foundation empowers future generations and preserves our heritage through grassroots initiatives. We create pathways for our community to share in the joy of travel and celebration, offering experiences that inspire, uplift, and endure.',
 		image: '/assets/hopeful-foundation.png',
 		cta: 'Explore Journeys',
+		text: 'The Hopeful Foundation’s initiatives are currently being shaped and will be unveiled soon.',
 	},
 ];
 
 export default function FeatureCards() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [modalText, setModalText] = useState('');
 
 	const handleClick = (e: React.MouseEvent) => {
 		e.preventDefault();
@@ -68,23 +71,34 @@ export default function FeatureCards() {
 								{feature.subtitle}
 							</p>
 
-							<button
-								onClick={(e) => {
-									feature.title === 'Curated Journeys' ||
-									feature.title === 'Bespoke Celebrations'
-										? handleClick(e)
-										: null;
-								}}
-								className='mt-auto px-6 py-2 border border-gold text-white bg-navy uppercase text-xs tracking-widest hover:bg-gold hover:text-white transition-all duration-300'
-							>
-								Visit Site
-							</button>
+							{feature.title === 'Curated Journeys' ||
+							feature.title === 'Bespoke Celebrations' ? (
+								<button
+									onClick={(e) => {
+										setModalText(feature.text || '');
+										handleClick(e);
+									}}
+									className='mt-auto px-6 py-2 border border-gold text-white bg-navy uppercase text-xs tracking-widest hover:bg-gold hover:text-white transition-all duration-300'
+								>
+									Visit Site
+								</button>
+							) : (
+								<a
+									href='https://ceilaotravel.com/'
+									target='_blank'
+									rel='noopener noreferrer'
+									className='mt-auto px-6 py-2 border border-gold text-white bg-navy uppercase text-xs tracking-widest hover:bg-gold hover:text-white transition-all duration-300 inline-flex items-center justify-center'
+								>
+									Visit Site
+								</a>
+							)}
 						</div>
 					))}
 				</div>
 			</div>
 			<LaunchingSoonModal
 				isOpen={isModalOpen}
+				text={modalText}
 				onClose={() => setIsModalOpen(false)}
 			/>
 		</section>

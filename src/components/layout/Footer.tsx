@@ -16,10 +16,11 @@ export default function Footer() {
 				</div>
 
 				{/* Brand Statement */}
-				<p className='text-center text-white/60 text-sm max-w-md mb-10 font-light leading-relaxed'>
-					Crafting bespoke journeys and moments of timeless elegance
-					in the heart of Sri Lanka. Experience the art of luxury
-					living.
+				<p className='text-center text-white/60 text-sm max-w-2xl mb-10 font-light leading-relaxed'>
+					Ceilão Collection is a house of brands united by luxury
+					hospitality and curated experiences. Rooted in our island’s
+					soul, we create lasting impressions while contributing to
+					meaningful impact across our communities.
 				</p>
 
 				{/* Navigation Links */}

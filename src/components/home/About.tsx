@@ -17,9 +17,10 @@ export default function About() {
 						hospitality and curated experiences. We blend
 						exceptional service with the authentic soul of our
 						island, ensuring the heartfelt warmth of our nation is
-						present at every guest touchpoint. We believe true
-						luxury is not simply experienced, but remembered. Our
-						legacy is rooted in the land we love. Through our
+						present at every guest touchpoint. <br /> <br />
+						We believe true luxury is not simply experienced, but
+						remembered. <br /> <br />
+						Our legacy is rooted in the land we love. Through our
 						collection wide social accountability approach, each
 						experience with Ceilão Collection contributes to
 						meaningful and lasting change within the communities we

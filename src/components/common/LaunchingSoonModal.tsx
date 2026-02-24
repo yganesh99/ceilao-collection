@@ -3,11 +3,15 @@ import { IoClose } from 'react-icons/io5';
 
 interface LaunchingSoonModalProps {
 	isOpen: boolean;
+	heading?: string;
+	text?: string;
 	onClose: () => void;
 }
 
 const LaunchingSoonModal: React.FC<LaunchingSoonModalProps> = ({
 	isOpen,
+	heading,
+	text,
 	onClose,
 }) => {
 	if (!isOpen) return null;
@@ -27,12 +31,11 @@ const LaunchingSoonModal: React.FC<LaunchingSoonModalProps> = ({
 				{/* Content */}
 				<div className='space-y-4'>
 					<h3 className='text-3xl font-serif text-navy'>
-						Launching Soon
+						{heading ? heading : ''}
 					</h3>
-					<p className='text-gray-600 font-sans'>
-						We're currently working on getting our social media
-						pages ready for you. Stay tuned for updates!
-					</p>
+					{text ? (
+						<p className='text-gray-600 font-sans'>{text || ''}</p>
+					) : null}
 					<button
 						onClick={onClose}
 						className='mt-6 px-6 py-2 bg-navy text-white font-sans rounded-full hover:bg-navy/90 transition-colors'

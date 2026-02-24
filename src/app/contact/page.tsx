@@ -24,9 +24,8 @@ export default function Contact() {
 							Get in Touch
 						</h2>
 						<p className='text-charcoal/80 font-light leading-relaxed mb-16 max-w-2xl mx-auto'>
-							Whether you are planning a private escape, a
-							destination wedding, or simply have a query about
-							our collection, our team is at your disposal.
+							Connect with Ceilão Collection. Begin the
+							conversation
 						</p>
 
 						<div className='flex flex-col items-center gap-12'>
@@ -40,7 +39,7 @@ export default function Contact() {
 										href='mailto:concierge@ceilaocollection.com'
 										className='text-charcoal/70 font-light hover:text-gold transition-colors text-lg'
 									>
-										concierge@ceilaocollection.com
+										navindu@ceilaocollection.com
 									</a>
 								</div>
 
