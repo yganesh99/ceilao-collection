@@ -54,7 +54,7 @@ export default function Footer() {
 				{/* Copyright */}
 				<div className='text-[10px] text-white/60 uppercase tracking-wider text-center'>
 					<p className='mt-2'>
-						Ceilão Collection (Private) Limited:- PV 00345241 |
+						Ceilão Collection (Private) Limited - PV 00345241 |
 						Registered in Sri Lanka.
 					</p>
 					<p>
