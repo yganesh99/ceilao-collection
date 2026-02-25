@@ -1,32 +1,16 @@
-import Image from 'next/image';
-
 export default function Hero() {
 	return (
 		<section className='relative h-screen w-full overflow-hidden'>
-			{/* Background Image */}
+			{/* Background Video */}
 			<div className='absolute inset-0'>
-				{/* Desktop Image */}
-				<div className='hidden md:block absolute inset-0'>
-					<Image
-						src='/assets/hero.gif'
-						alt='Sri Lankan Landscape'
-						fill
-						className='object-cover animate-ken-burns'
-						priority
-						quality={90}
-					/>
-				</div>
-				{/* Mobile Image */}
-				<div className='block md:hidden absolute inset-0'>
-					<Image
-						src='/assets/hero.gif'
-						alt='Sri Lankan Landscape'
-						fill
-						className='object-cover animate-ken-burns'
-						priority
-						quality={90}
-					/>
-				</div>
+				<video
+					src='/assets/hero.mp4'
+					autoPlay
+					loop
+					muted
+					playsInline
+					className='w-full h-full object-cover animate-ken-burns'
+				/>
 				{/* Overlay gradient for text readability */}
 				<div className='absolute inset-0 bg-black/30 bg-linear-to-b from-black/40 via-transparent to-black/20' />
 

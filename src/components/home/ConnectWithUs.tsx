@@ -13,45 +13,114 @@ import {
 } from 'react-icons/fa';
 
 const ConnectWithUs = () => {
+	interface Social {
+		icon: any;
+		href: string;
+		label: string;
+	}
+
+	interface Brand {
+		name: string;
+		id: number;
+		imageSrc: string;
+		text: string;
+		socialLinks: Social[];
+	}
+
 	const brands = [
 		{
 			name: 'Ceilão Collection',
 			id: 1,
 			imageSrc: '/assets/logo.png',
 			text: 'Unveiling Soon',
+			socialLinks: [
+				{
+					icon: FaInstagram,
+					href: 'https://www.instagram.com/ceilao.collection?igsh=MW5vMWVqa2ZpYm9mZw==',
+					label: 'Instagram',
+				},
+				{
+					icon: FaFacebook,
+					href: 'https://www.facebook.com/share/1CcuqrZ8p3/?mibextid=wwXIfr',
+					label: 'Facebook',
+				},
+				{
+					icon: FaTiktok,
+					href: 'https://www.tiktok.com/@ceilao.collection?_r=1&_t=ZS-94Dl1B661AL',
+					label: 'TikTok',
+				},
+				{
+					icon: FaWhatsapp,
+					href: 'https://wa.me/94771319489',
+					label: 'Whatsapp',
+				},
+			],
 		},
 		{
 			name: 'Ceilão Travels & Tours',
 			id: 2,
 			imageSrc: '/assets/ceilao-tours-logo.png',
 			text: 'Unveiling Soon',
+			socialLinks: [
+				{
+					icon: FaInstagram,
+					href: 'https://www.instagram.com/ceilao.travels?igsh=NHR2eHZmdDhsaDY=',
+					label: 'Instagram',
+				},
+				{
+					icon: FaFacebook,
+					href: 'https://www.facebook.com/share/18869zyGwa/?mibextid=wwXIfr',
+					label: 'Facebook',
+				},
+				{
+					icon: FaTiktok,
+					href: 'https://www.tiktok.com/@ceilao.travels?_r=1&_t=ZS-94CF0CH815A',
+					label: 'TikTok',
+				},
+				{
+					icon: FaWhatsapp,
+					href: 'https://wa.me/94771319589',
+					label: 'Whatsapp',
+				},
+			],
 		},
 		{
 			name: 'Ceilão Events',
 			id: 3,
 			imageSrc: '/assets/ceilao-events-logo.png',
 			text: 'Unveiling Soon',
+			socialLinks: [
+				{ icon: FaInstagram, href: '#', label: 'Instagram' },
+				{ icon: FaFacebook, href: '#', label: 'Facebook' },
+				{ icon: FaTiktok, href: '#', label: 'TikTok' },
+				{ icon: FaWhatsapp, href: '#', label: 'Whatsapp' },
+			],
 		},
 		{
 			name: 'Hopeful Foundation',
 			id: 4,
 			imageSrc: '/assets/hopeful-foundation.png',
 			text: 'Unveiling Soon',
+			socialLinks: [
+				{ icon: FaInstagram, href: '#', label: 'Instagram' },
+				{ icon: FaFacebook, href: '#', label: 'Facebook' },
+				{ icon: FaTiktok, href: '#', label: 'TikTok' },
+				{ icon: FaWhatsapp, href: '#', label: 'Whatsapp' },
+			],
 		},
-	];
-
-	const socialLinks = [
-		{ icon: FaInstagram, href: '#', label: 'Instagram' },
-		{ icon: FaFacebook, href: '#', label: 'Facebook' },
-		{ icon: FaTiktok, href: '#', label: 'TikTok' },
-		{ icon: FaWhatsapp, href: '#', label: 'Whatsapp' },
 	];
 
 	const [isModalOpen, setIsModalOpen] = useState(false);
 
-	const handleSocialClick = (e: React.MouseEvent) => {
-		e.preventDefault();
-		setIsModalOpen(true);
+	const handleSocialClick = (e: React.MouseEvent, brand: Brand) => {
+		if (
+			brand.name === 'Ceilão Events' ||
+			brand.name === 'Hopeful Foundation'
+		) {
+			e.preventDefault();
+			setIsModalOpen(true);
+		}
+		return;
 	};
 
 	return (
@@ -83,11 +152,15 @@ const ConnectWithUs = () => {
 
 							{/* Social Icons */}
 							<div className='flex items-center gap-6'>
-								{socialLinks.map((social) => (
+								{brand.socialLinks.map((social) => (
 									<Link
+										target='_blank'
+										rel='noopener noreferrer'
 										key={social.label}
 										href={social.href}
-										onClick={handleSocialClick}
+										onClick={(e: React.MouseEvent) => {
+											handleSocialClick(e, brand);
+										}}
 										className='text-navy hover:text-gold transition-colors duration-300 transform hover:scale-110'
 										aria-label={`${brand.name} on ${social.label}`}
 									>
