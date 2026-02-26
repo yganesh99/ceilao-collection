@@ -41,6 +41,7 @@ export default function CommitmentPage() {
 					>
 						Our Commitment
 					</motion.h1>
+					<div className='w-24 h-0.5 bg-[#d4af37] mx-auto mt-6' />
 					<div className='w-24 h-0.5 bg-accent mx-auto mt-4' />
 					<motion.div
 						initial={{ opacity: 0 }}

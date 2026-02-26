@@ -12,8 +12,8 @@ export default function Contact() {
 	return (
 		<main>
 			<PageHeader
-				title='Begin Your Journey'
-				subtitle='Allow us to curate your perfect Sri Lankan experience.'
+				title='Luxury Hospitality. Lasting Impressions.'
+				// subtitle='Allow us to curate your perfect Sri Lankan experience.'
 				image='/assets/hero.png'
 				video='/assets/hero.mp4'
 			/>

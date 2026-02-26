@@ -11,6 +11,7 @@ import {
 	FaTiktok,
 	FaWhatsapp,
 } from 'react-icons/fa';
+import LaunchingSoonModal2 from '../common/LaunchingSoonModal2';
 
 const ConnectWithUs = () => {
 	interface Social {
@@ -173,10 +174,10 @@ const ConnectWithUs = () => {
 				</div>
 			</div>
 
-			<LaunchingSoonModal
+			<LaunchingSoonModal2
 				isOpen={isModalOpen}
 				onClose={() => setIsModalOpen(false)}
-				heading='Unveiling Soon'
+				text='Unveiling Soon'
 				// text='We’re crafting something special. Stay tuned for updates.'
 			/>
 		</section>
