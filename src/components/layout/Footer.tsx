@@ -1,18 +1,25 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Footer() {
+	const [showLegalMenu, setShowLegalMenu] = useState(false);
+
 	return (
 		<footer className='bg-navy text-white py-16 border-t border-gold/20'>
 			<div className='container mx-auto px-6 flex flex-col items-center'>
 				{/* Logo */}
 				<div className='relative w-32 h-16 mb-8 opacity-80 hover:opacity-100 transition-opacity'>
-					<Image
-						src='/assets/logo.png'
-						alt='Ceilão Collection'
-						fill
-						className='object-contain'
-					/>
+					<Link href='/'>
+						<Image
+							src='/assets/logo.png'
+							alt='Ceilão Collection'
+							fill
+							className='object-contain'
+						/>
+					</Link>
 				</div>
 
 				{/* Brand Statement */}
@@ -24,31 +31,56 @@ export default function Footer() {
 				</p>
 
 				{/* Navigation Links */}
-				<div className='flex space-x-8 mb-10 text-xs tracking-widest uppercase text-gold/80'>
-					<Link
-						href='/about'
-						className='hover:text-white transition-colors'
-					>
-						About Us
-					</Link>
-					<Link
-						href='/legal'
-						className='hover:text-white transition-colors'
-					>
-						Legal
-					</Link>
-					<Link
-						href='/commitments'
-						className='hover:text-white transition-colors'
-					>
-						Commitments
-					</Link>
-					<Link
-						href='/contact'
-						className='hover:text-white transition-colors'
-					>
-						Contact
-					</Link>
+				<div className='min-h-[24px] flex flex-wrap justify-center gap-6 md:gap-8 mb-10 text-xs tracking-widest uppercase text-gold/80'>
+					{!showLegalMenu ? (
+						<>
+							<a
+								onClick={() => setShowLegalMenu(true)}
+								className='hover:text-white transition-colors focus:outline-none cursor-pointer'
+							>
+								Legal
+							</a>
+							<Link
+								href='/commitment'
+								className='hover:text-white transition-colors'
+							>
+								Commitments
+							</Link>
+							<Link
+								href='/about'
+								className='hover:text-white transition-colors'
+							>
+								About Us
+							</Link>
+							<Link
+								href='/contact'
+								className='hover:text-white transition-colors'
+							>
+								Contact
+							</Link>
+						</>
+					) : (
+						<>
+							<Link
+								href='/privacy-policy'
+								className='hover:text-white transition-colors'
+							>
+								Privacy Policy
+							</Link>
+							<Link
+								href='/terms-and-conditions'
+								className='hover:text-white transition-colors'
+							>
+								Terms & Conditions
+							</Link>
+							<a
+								onClick={() => setShowLegalMenu(false)}
+								className='hover:text-white transition-colors focus:outline-none cursor-pointer'
+							>
+								Close
+							</a>
+						</>
+					)}
 				</div>
 
 				{/* Copyright */}

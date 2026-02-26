@@ -18,7 +18,7 @@ const LaunchingSoonModal: React.FC<LaunchingSoonModalProps> = ({
 
 	return (
 		<div className='fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in'>
-			<div className='relative bg-white rounded-lg p-8 max-w-md w-full text-center shadow-2xl animate-scale-up'>
+			<div className='relative bg-white rounded-lg p-8 max-w-sm w-full text-center shadow-2xl animate-scale-up border-[#d4af37] border-2'>
 				{/* Close Button */}
 				<button
 					onClick={onClose}
@@ -40,7 +40,7 @@ const LaunchingSoonModal: React.FC<LaunchingSoonModalProps> = ({
 						onClick={onClose}
 						className='mt-6 px-6 py-2 bg-navy text-white font-sans rounded-full hover:bg-navy/90 transition-colors'
 					>
-						Got it
+						Got it!
 					</button>
 				</div>
 			</div>

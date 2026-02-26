@@ -12,10 +12,11 @@ export default function About() {
 		<main>
 			<section className='py-24 bg-white'>
 				{/* Content */}
-				<div className='relative z-10 text-center px-4 w-fit mx-auto border-[#d4af37] border py-2 mt-16'>
+				<div className='relative z-10 text-center px-4 w-fit mx-auto py-2 mt-16'>
 					<h1 className='text-4xl md:text-5xl lg:text-6xl font-serif text-navy tracking-wide'>
 						About Us
 					</h1>
+					<div className='w-24 h-0.5 bg-[#d4af37] mx-auto mt-6' />
 				</div>
 				<div className='container mx-auto px-6 flex flex-col md:flex-row mt-16'>
 					<div className='w-full max-w-4xl mx-auto'>

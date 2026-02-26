@@ -1,13 +1,23 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 export default function Header() {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(false);
 	const pathname = usePathname();
+
+	useEffect(() => {
+		const handleScroll = () => {
+			setIsScrolled(window.scrollY > 20);
+		};
+
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
 
 	const toggleMenu = () => {
 		setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -35,7 +45,13 @@ export default function Header() {
 
 	return (
 		<>
-			<header className='absolute top-0 w-full z-50 bg-champagne py-4'>
+			<header
+				className={`fixed top-0 w-full z-50 py-4 transition-colors duration-300 ${
+					isScrolled
+						? 'bg-transparent backdrop-blur-sm'
+						: 'bg-champagne'
+				}`}
+			>
 				<div className='container mx-auto px-2 flex justify-between items-center relative'>
 					{/* Logo */}
 					<div className='relative h-16 md:h-16 lg:h-20 aspect-2/1'>

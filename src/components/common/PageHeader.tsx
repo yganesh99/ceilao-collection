@@ -4,24 +4,38 @@ interface PageHeaderProps {
 	title: string;
 	subtitle?: string;
 	image: string;
+	video?: string;
 }
 
 export default function PageHeader({
 	title,
 	subtitle,
 	image,
+	video,
 }: PageHeaderProps) {
 	return (
-		<section className='relative h-[60vh] md:h-[70vh] w-full overflow-hidden flex items-center justify-center'>
-			{/* Background Image */}
+		<section className='relative h-screen w-full overflow-hidden flex items-center justify-center'>
+			{/* Background */}
 			<div className='absolute inset-0'>
-				<Image
-					src={image}
-					alt={title}
-					fill
-					className='object-cover'
-					priority
-				/>
+				{video ? (
+					<video
+						src={video}
+						poster={image}
+						autoPlay
+						loop
+						muted
+						playsInline
+						className='w-full h-full object-cover'
+					/>
+				) : (
+					<Image
+						src={image}
+						alt={title}
+						fill
+						className='object-cover'
+						priority
+					/>
+				)}
 				{/* Overlay */}
 				<div className='absolute inset-0 bg-black/40 bg-linear-to-b from-black/50 via-transparent to-black/30' />
 			</div>

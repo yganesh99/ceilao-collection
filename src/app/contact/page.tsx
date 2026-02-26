@@ -15,23 +15,25 @@ export default function Contact() {
 				title='Begin Your Journey'
 				subtitle='Allow us to curate your perfect Sri Lankan experience.'
 				image='/assets/hero.png'
+				video='/assets/hero.mp4'
 			/>
 
 			<section className='py-24 bg-white'>
 				<div className='container mx-auto px-6'>
 					<div className='w-full max-w-4xl mx-auto text-center'>
-						<h2 className='text-3xl font-serif text-navy mb-8'>
+						<h2 className='text-3xl font-serif text-navy mb-4'>
 							Get in Touch
 						</h2>
+						<div className='w-24 h-0.5 bg-[#d4af37] mx-auto mb-4' />
 						<p className='text-charcoal/80 font-light leading-relaxed mb-16 max-w-2xl mx-auto'>
 							Connect with Ceilão Collection. Begin the
-							conversation
+							conversation.
 						</p>
 
 						<div className='flex flex-col items-center gap-12'>
 							{/* Email & Phone Row */}
-							<div className='flex flex-col md:flex-row gap-12 md:gap-32 items-center justify-center w-full'>
-								<div className='flex flex-col items-center gap-4 group'>
+							<div className='grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-0 w-full max-w-2xl mx-auto'>
+								<div className='flex flex-col items-center gap-4 group text-center'>
 									<div className='w-12 h-12 flex items-center justify-center rounded-full bg-champagne/30 text-navy group-hover:bg-navy group-hover:text-gold transition-all duration-300'>
 										<FaEnvelope size={24} />
 									</div>
@@ -43,7 +45,7 @@ export default function Contact() {
 									</a>
 								</div>
 
-								<div className='flex flex-col items-center gap-4 group'>
+								<div className='flex flex-col items-center gap-4 group text-center'>
 									<div className='w-12 h-12 flex items-center justify-center rounded-full bg-champagne/30 text-navy group-hover:bg-navy group-hover:text-gold transition-all duration-300'>
 										<FaPhone size={24} />
 									</div>
@@ -57,9 +59,9 @@ export default function Contact() {
 							</div>
 
 							{/* WhatsApp Row */}
-							<div className='flex flex-col items-center gap-4 md:ml-20 group'>
+							<div className='flex flex-col items-center gap-4 group'>
 								<a
-									href='https://wa.me/94112345678'
+									href='https://wa.me/94771319489'
 									target='_blank'
 									rel='noopener noreferrer'
 									className='w-14 h-14 flex items-center justify-center rounded-full bg-champagne/30 text-navy group-hover:bg-navy group-hover:text-gold transition-all duration-300'
