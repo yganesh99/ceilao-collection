@@ -12,7 +12,7 @@ export default function About() {
 						CEILÃO COLLECTION
 					</h1>
 
-					<p className='text-white text-xl justify-center px-0.5 sm:px-1 lg:px-20 mb-4 mt-10'>
+					<p className='text-white text-sm sm:text-xl justify-center px-0.5 sm:px-1 lg:px-20 mb-4 mt-10'>
 						Ceilão Collection is a house of brands united by luxury
 						hospitality and curated experiences. We blend
 						exceptional service with the authentic soul of our

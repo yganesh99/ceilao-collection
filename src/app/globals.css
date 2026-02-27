@@ -12,6 +12,8 @@
 	--animate-fade-in: fade-in 1s ease-out;
 	--animate-slide-up: slide-up 1s ease-out;
 
+	--breakpoint-xs: 575px;
+
 	@keyframes fade-in {
 		from {
 			opacity: 0;
