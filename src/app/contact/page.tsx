@@ -38,7 +38,9 @@ export default function Contact() {
 										<FaEnvelope size={24} />
 									</div>
 									<a
-										href='mailto:concierge@ceilaocollection.com'
+										href={`mailto:concierge@ceilaocollection.com?subject=${encodeURIComponent(
+											'Connecting with Ceilão Collection',
+										)}`}
 										className='text-charcoal/70 font-light hover:text-gold transition-colors text-lg'
 									>
 										navindu@ceilaocollection.com
@@ -61,7 +63,9 @@ export default function Contact() {
 							{/* WhatsApp Row */}
 							<div className='flex flex-col items-center gap-4 group'>
 								<a
-									href='https://wa.me/94771319489'
+									href={`https://wa.me/94771319489?text=${encodeURIComponent(
+										`Hello Ceilão Collection! I am interested in your services.\n\nMy name:\n\nMessage:`,
+									)}`}
 									target='_blank'
 									rel='noopener noreferrer'
 									className='w-14 h-14 flex items-center justify-center rounded-full bg-champagne/30 text-navy group-hover:bg-navy group-hover:text-gold transition-all duration-300'

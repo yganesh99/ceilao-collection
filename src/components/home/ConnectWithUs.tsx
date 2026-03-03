@@ -52,7 +52,9 @@ const ConnectWithUs = () => {
 				},
 				{
 					icon: FaWhatsapp,
-					href: 'https://wa.me/94771319489',
+					href: `https://wa.me/94771319489?text=${encodeURIComponent(
+						`Hello Ceilão Collection! I’m reaching out through the website.\n\nMy name:\n\nMessage:`,
+					)}`,
 					label: 'Whatsapp',
 				},
 			],
@@ -80,7 +82,9 @@ const ConnectWithUs = () => {
 				},
 				{
 					icon: FaWhatsapp,
-					href: 'https://wa.me/94771319589',
+					href: `https://wa.me/94771319589?text=${encodeURIComponent(
+						`Hello Ceilão Travel & Tours! I am reaching out from The Ceilão Collection website. I would love to learn more about your curated travel experiences.\n\nMy name:\n\nMessage:`,
+					)}`,
 					label: 'Whatsapp',
 				},
 			],

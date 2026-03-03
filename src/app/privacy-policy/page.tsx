@@ -404,7 +404,9 @@ export default function PrivacyPolicyPage() {
 								<li>
 									Email:{' '}
 									<a
-										href='mailto:navindu@ceilaocollection.com'
+										href={`mailto:navindu@ceilaocollection.com?subject=${encodeURIComponent(
+											'Connecting with Ceilão Collection',
+										)}`}
 										className='hover:text-accent font-normal transition-colors'
 									>
 										navindu@ceilaocollection.com
