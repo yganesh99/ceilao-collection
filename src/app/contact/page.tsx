@@ -38,7 +38,7 @@ export default function Contact() {
 										<FaEnvelope size={24} />
 									</div>
 									<a
-										href={`mailto:concierge@ceilaocollection.com?subject=${encodeURIComponent(
+										href={`mailto:navindu@ceilaocollection.com?subject=${encodeURIComponent(
 											'Connecting with Ceilão Collection',
 										)}`}
 										className='text-charcoal/70 font-light hover:text-gold transition-colors text-lg'
