@@ -18,9 +18,9 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-	title: 'Ceilão Collection | Bespoke Sri Lankan Journeys',
+	title: 'Ceilão Collection | House of Brands & Luxury Hospitality',
 	description:
-		'Crafting bespoke destinations, journeys, and celebrations in Sri Lanka. Experience luxury, heritage, and timeless elegance with Ceilão Collection.',
+		'Curated journeys, signature events, and luxury experiences that embody the soul of Sri Lanka. Discover timeless elegance with a purpose.',
 };
 
 export default function RootLayout({
