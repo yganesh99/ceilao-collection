@@ -41,8 +41,8 @@ export default function PageHeader({
 			</div>
 
 			{/* Content */}
-			<div className='relative z-10 text-center text-white px-6 max-w-4xl pt-20'>
-				<h1 className='text-4xl md:text-6xl lg:text-7xl mb-6 font-serif tracking-wide'>
+			<div className='relative z-10 text-center text-white px-6 max-w-5xl pt-1'>
+				<h1 className='text-white text-sm md:text-3xl lg:text-5xl font-light tracking-wide text-center px-4 drop-shadow-md font-serif italic'>
 					{title}
 				</h1>
 				{subtitle && (
